@@ -1,1 +1,6 @@
 .ipynb_checkpoints
+# Word temporary
+~$*.doc*
+
+# Excel temporary
+~$*.xls*
