@@ -6,3 +6,7 @@
 
 # Excel temporary
 ~$*.xls*
+
+#db
+db/
+__pycache__/
