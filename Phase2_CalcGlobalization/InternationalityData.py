@@ -237,7 +237,7 @@ def DB_GetJournalCountriesOfField(field, period, MULTI_DISCIPLINE_LIMIT,conn):
     pivot = data.pivot(index='ISSN',columns='Country',values='Documents')
     return pivot.fillna(0).astype(int)#.div(total,axis=0)
 
-def DB_GetFieldCountries(field, period, conn=None):
+def DB_GetFieldCountries(field, period,MULTI_DISCIPLINE_LIMIT='', conn=None):
     if conn is None:
         conn = DB_joinJournals()
 

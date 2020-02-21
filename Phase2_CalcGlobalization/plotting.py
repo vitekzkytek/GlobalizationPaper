@@ -2,8 +2,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from InternationalityIndex.InternationalityData import *
-from InternationalityIndex.InternationalityCalculations import SubsetJournalsByMinDocuments,CalcJournalInternationality
+from InternationalityData import *
+from InternationalityCalculations import SubsetJournalsByMinDocuments, CalcJournalInternationality
 
 
 idx = pd.IndexSlice
@@ -209,51 +209,51 @@ def plotScatterOfJournalMethods(field,period,fieldDistAllYears):
 #%%
 #df = readSavedInternationalityData()
 
-adv = ['Hong Kong','Iceland','Ireland','Israel','Italy','Japan','Liechtenstein','Luxembourg','Monaco','Netherlands','New Zealand',
-       'Norway','Portugal','San Marino','Singapore','South Korea','Spain','Sweden','Switzerland','Taiwan','United Kingdom',
-       'United States']
+# adv = ['Hong Kong','Iceland','Ireland','Israel','Italy','Japan','Liechtenstein','Luxembourg','Monaco','Netherlands','New Zealand',
+#        'Norway','Portugal','San Marino','Singapore','South Korea','Spain','Sweden','Switzerland','Taiwan','United Kingdom',
+#        'United States']
 
-tra = ['Albania','Armenia','Croatia','Czech Republic','Estonia','Azerbaijan','Hungary','Belarus','Bosnia and Herzegovina',
-       'Bulgaria','Latvia','Lithuania','Georgia','Kazakhstan','Kyrgyzstan','Poland','Macedonia','Moldova','Mongolia','Montenegro',
-       'Romania','Russian Federation','Serbia','Slovakia','Slovenia','Tajikistan','Turkmenistan','Ukraine','Uzbekistan']
+# tra = ['Albania','Armenia','Croatia','Czech Republic','Estonia','Azerbaijan','Hungary','Belarus','Bosnia and Herzegovina',
+#        'Bulgaria','Latvia','Lithuania','Georgia','Kazakhstan','Kyrgyzstan','Poland','Macedonia','Moldova','Mongolia','Montenegro',
+#        'Romania','Russian Federation','Serbia','Slovakia','Slovenia','Tajikistan','Turkmenistan','Ukraine','Uzbekistan']
 
-dists = plotJournalDistsCountries('top_Social',2017,'euclid',True,False,NoCountries=250)
-dists['H1'] = dists.Q1 + dists.Q2
-dists = dists.sort_values('H1')
-df_adv = dists.loc[adv, 'H1']
-df_tra = dists.loc[tra, 'H1']
+# dists = plotJournalDistsCountries('top_Social',2017,'euclid',True,False,NoCountries=250)
+# dists['H1'] = dists.Q1 + dists.Q2
+# dists = dists.sort_values('H1')
+# df_adv = dists.loc[adv, 'H1']
+# df_tra = dists.loc[tra, 'H1']
 
-#%%
-methods = ['euclid','weightGini','localShare','shareEnglish','top3','GiniSimpson']
+# #%%
+# methods = ['euclid','weightGini','localShare','shareEnglish','top3','GiniSimpson']
 
-for method in methods:
-    df.loc[idx[2017, method, 'All', :]].hist(bins=40, range=(0, 1))
-    plt.title(method)
-    plt.show()
-#%%
-#df = readSavedInternationalityData()
-from tqdm import tqdm
-cntrs = pd.read_excel('D:\Dropbox\Hugo\science-internationality-index\main\public\data\populateAmazon.xlsx',sheet_name='country')
-adv = cntrs.loc[cntrs.imf2003 == 'Developed Countries'].name
-transition = pd.DataFrame(index=fields,columns=methods)
-for field in tqdm(['All'] + fields1):
-    for method in methods:
-        print('Field: {}, Method: {}'.format(field,method))
-        dists = plotJournalDistsCountries(field,2017,method,True,False)
-        df2 = dists.reindex(list(adv))
-        transition.loc[field,method] = (df2.Q1+df2.Q2).mean()
+# for method in methods:
+#     df.loc[idx[2017, method, 'All', :]].hist(bins=40, range=(0, 1))
+#     plt.title(method)
+#     plt.show()
+# #%%
+# #df = readSavedInternationalityData()
+# from tqdm import tqdm
+# cntrs = pd.read_excel('D:\Dropbox\Hugo\science-internationality-index\main\public\data\populateAmazon.xlsx',sheet_name='country')
+# adv = cntrs.loc[cntrs.imf2003 == 'Developed Countries'].name
+# transition = pd.DataFrame(index=fields,columns=methods)
+# for field in tqdm(['All'] + fields1):
+#     for method in methods:
+#         print('Field: {}, Method: {}'.format(field,method))
+#         dists = plotJournalDistsCountries(field,2017,method,True,False)
+#         df2 = dists.reindex(list(adv))
+#         transition.loc[field,method] = (df2.Q1+df2.Q2).mean()
 
-#%%
-from tqdm import tqdm
-cntrs = pd.read_excel('D:\Dropbox\Hugo\science-internationality-index\main\public\data\populateAmazon.xlsx',sheet_name='country')
-adv = cntrs.loc[cntrs.imf2003 == 'Developed Countries'].name
-developed= pd.DataFrame(index=fields,columns=methods)
-for field in tqdm(['All'] + fields1):
-    for method in methods:
-        print('Field: {}, Method: {}'.format(field,method))
-        dists = plotJournalDistsCountries(field,2017,method,True,False)
-        df2 = dists.reindex(list(adv))
-        developed.loc[field,method] = (df2.Q1+df2.Q2).mean()
+# #%%
+# from tqdm import tqdm
+# cntrs = pd.read_excel('D:\Dropbox\Hugo\science-internationality-index\main\public\data\populateAmazon.xlsx',sheet_name='country')
+# adv = cntrs.loc[cntrs.imf2003 == 'Developed Countries'].name
+# developed= pd.DataFrame(index=fields,columns=methods)
+# for field in tqdm(['All'] + fields1):
+#     for method in methods:
+#         print('Field: {}, Method: {}'.format(field,method))
+#         dists = plotJournalDistsCountries(field,2017,method,True,False)
+#         df2 = dists.reindex(list(adv))
+#         developed.loc[field,method] = (df2.Q1+df2.Q2).mean()
 
 
 #%%

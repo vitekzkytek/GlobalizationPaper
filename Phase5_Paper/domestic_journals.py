@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
  
 def DB_joinJournals(path=None):
     if path is None:
-        path = 'sqlite:///{}\\db\\180802_1611_AllJournals_ArReCp_2001_2017.sqlite'.format(os.getcwd())
+        path = 'sqlite:///../db/180802_1611_AllJournals_ArReCp_2001_2017.sqlite'
     engine = create_engine(path)
     return engine
  

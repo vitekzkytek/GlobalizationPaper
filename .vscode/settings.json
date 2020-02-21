@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "C:\\Users\\OP3202\\.conda\\envs\\jupyter\\python.exe"
+    "python.pythonPath": "C:\\Users\\OP3202\\.conda\\envs\\jupyter\\python.exe",
+    "python.dataScience.jupyterServerURI": "local"
 }
