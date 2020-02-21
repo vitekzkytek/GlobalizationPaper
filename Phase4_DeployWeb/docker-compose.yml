@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+   db:
+      image: postgres:9.4
+      restart: 'no'
+      environment:
+         POSTGRES_PASSWORD: postgres
+         POSTGRES_USER: postgres
+         POSTGRES_DB: scienceInternationalitydb
+      volumes:
+         - ./db/GlobalizationData.sql:/docker-entrypoint-initdb.d/init.sql
+   globalization_app:
+      build:
+         context: .
+         dockerfile: Dockerfile
+      image: docker
+      restart: 'no'
+      container_name: nodejs
+      volumes:
+         - ./app:/home/node/app
+      environment:
+         PORT: 8082
+      ports:
+         - "80:8082"
+     

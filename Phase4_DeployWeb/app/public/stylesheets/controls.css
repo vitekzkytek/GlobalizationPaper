@@ -1,0 +1,91 @@
+#switchers {
+    margin:10px;
+    position: relative;
+    font-size: calc(9px + 0.6vh);
+}
+
+.switcher.pretext {
+    font-weight: bold;
+}
+.switcher {
+    float:none;
+    width: 100%;
+    text-align: center;
+}
+
+.switchCol {
+    cursor: pointer;
+}
+
+.switcher:after {
+    content: "";
+    display:table;
+    clear:both;
+}
+
+#swFilters {
+    /* margin-right: 100px; */
+}
+#swYears {
+    text-align: center;
+}
+
+#swSumBy {
+    /* float:right; */
+    text-align:right;
+}
+
+.switchCol {
+    display:inline-block;
+    margin:5px;
+    color: #bb133e;
+}
+
+.switchActive {
+    border-bottom: 3px solid #bb133e;
+}
+
+.switchCol:hover {
+    border-bottom: 3px solid #bb133e;
+}
+
+.switchcompare {
+    cursor:pointer;
+}
+
+.switchcompare svg {
+    fill:#DDDDDD;
+    position: relative;
+    top:10px;
+}
+
+.multiswitcher svg {
+    fill:#BB133E;
+}
+
+.column {
+    float: left;
+    width: 95%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+#app #controls:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Clear floats after the columns */
+
+
+
+.select2-container--default .select2-results > .select2-results__options {
+    max-height: 450px;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__clear{ margin-bottom: 5px; }
+

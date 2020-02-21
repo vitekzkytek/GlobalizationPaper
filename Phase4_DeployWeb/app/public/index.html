@@ -1,0 +1,811 @@
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119824152-3"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-119824152-3');
+</script>
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="description" content="How global is science in your country? Smart app based on evidence from 174 countries and 27 disciplines!" >
+<link rel="stylesheet" href="stylesheets/jquery-ui.css">
+
+<link rel="stylesheet" type="text/css" href="stylesheets/page.css" />
+
+<link rel="stylesheet" type="text/css" href="stylesheets/chart.css" />
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" />
+<link rel="stylesheet" type="text/css" href="stylesheets/controls.css" />
+
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans&amp;subset=latin-ext" rel="stylesheet">
+<script type="text/javascript" src="//wurfl.io/wurfl.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" ></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" ></script>
+<script src="https://d3js.org/d3.v4.min.js" ></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" ></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+});
+</script>
+
+
+<script src="javascripts/controls.js" ></script>
+<script src="javascripts/controls_data.js" ></script>
+<script src="javascripts/chart.js" ></script>
+<script src="javascripts/page.js" ></script>
+<script src="javascripts/data.js" ></script>
+<script src="javascripts/map.js" ></script>
+
+<!--<script src="data/methods.js"></script>-->
+
+<title>Globalization of Science</title>
+
+<body onload="loadJS()">
+<div id="everything">
+    <div id="intro" class="fix fullscreen fixactive">
+        <div class="content">
+            <h1 id="title">Globalization of Science</h1>
+            <h2 id="subtitle">Evidence from Authors in Academic Journals<br /> by Country of Origin</h2>
+
+            <p style="font-size:calc(15px + .7vh);" >Vít Macháček and Martin Srholec</p>
+            <div id="logos">
+                <a href="https://idea-en.cerge-ei.cz/" target="_blank"><img src="img/idea-white2.svg" class="logo"/></a>
+                <a href="http://www.avcr.cz/en/strategy/research-programmes/programmes-of-strategy-av21/index.html" target="_blank" ><img src="img/strategy_red_white.png" class="logo"/></a>
+            </div>
+
+            <p style="line-height: .5">Think-tank IDEA of the Economic Institute of Czech Academy of Sciences</p>
+            <p style="line-height: .5">Study No. 6/2019</p>
+            <p style="line-height: .5">May 2019</p>
+            <br />
+            <img src="img/down-arrow2.svg" onclick="MoveOn('context')" class='arrow' title="Posunujte kolečkem myši dolů"/>
+
+        </div>
+    </div>
+    <div id="empty-intro" class="fixempty fullscreen"></div>
+    <div id="menu" class="floaty">
+        <a class="corner" href="https://idea-en.cerge-ei.cz/" target="_blank" style="left:10px;"><img src="img/IDEA2.png"/></a>
+        <div class="content">
+            <center>
+                <a id="mContext" onclick="MoveOn('context')">Intro</a>
+                <a id="mApp" onclick="MoveOn('empt-app',60)">App</a>
+                <a id="mCountries" onclick="MoveOn('broad')">Countries</a>
+                <a id="mDisciplines" onclick="MoveOn('advanced')">Disciplines</a>
+                <a id="mMap" onclick="MoveOn('map',-50)">Map</a>
+                <a id="mConclusion" onclick="MoveOn('conclusion')">Conclusions</a>
+            </center>
+        </div>
+        <a class="corner" href="http://www.avcr.cz/en/strategy/research-programmes/programmes-of-strategy-av21/index.html" target="_blank" style="right: 10px;"><img src="img/justStrategyWhite_EN.png" /></a>
+
+    </div>
+    <div id="menuempty"></div>
+    <div id="context" class="flow flowtext">
+        <div class="content">
+            <h3>Introduction</h3>
+            <p>Science knows no limits or borders. Scientific inquiry has therefore gone global long before the economy
+                or culture. Nevertheless, this does not necessarily mean that science is global to the same extent everywhere.</p>
+
+            <p>To what extent are scientific outputs published in global as opposed to local journals? How does this
+                differ across countries and disciplines? How much has this changed over the last decade?</p>
+
+            <p>The aim of this study is to show that. We provide new evidence on the globalization of
+                science that allows us to compare over space, fields and time. Specifically, we compare 174 <a class="modalLink" onclick="showModal('modCountries')">countries</a>
+                and various <a class="modalLink" onclick="showModal('modCountryGroups')">country groups</a> in 4 broad
+                and 27 narrow <a class="modalLink" onclick="showModal('modDisciplines')">disciplines</a> over the period
+                from 2005 to 2017.</p>
+
+            <p>The study is based on six <a class="modalLink" onclick="showMethodModal('euclid')">journal-level indicators</a>
+                of globalization. The benchmark indicators are derived from the data on authors by the country of
+                origin. For comparison, we also use data on documents by the country of origin and
+                English-written documents.</p>
+
+            <p>The journal-level indicators are then <a class="modalLink" onclick="showModal('modFramework')">aggregated to countries and disciplines</a>.
+                These results are standardized between 0 and 1, in which 0 refers to the lowest and 1 to the highest globalization.</p>
+
+            <p>The analysis is based on <a class="modalLink" onclick="showModal('modScopus')">data </a>
+                from the <a target="_blank" href="https://www.scopus.com/">Scopus citation database</a>.
+                The list of journals and assigned disciplines is obtained from the <a href="xls/ext_list_April_2018_2017_Metrics.xlsx" target="_blank">Scopus Source List</a>.</p>
+
+            <p>Globalization of science should not be confused with quality (or relevance) of science; they are likely to be
+                related in many ways, depending on the discipline, but they are different phenomena.</p>
+
+            <p>The results are presented in an interactive manner that allows readers to customize the analysis. Further,
+                the results should be of interest not only to academics, but also to policy-makers and to a broader audience across the globe.</p>
+
+            <p>Please see this link <a href="https://idea-en.cerge-ei.cz/publicationslist" target="_blank">here</a> for earlier studies by the IDEA think tank on related topics, including on <a class="modalLink" onclick="showModal('modLocalJournals')">local journals</a>,
+                <a class="modalLink" onclick="showModal('modPredators')">predatory publishing</a>, and
+                <a class="modalLink" onclick="showModal('modQuantityInfluence')">quantity vs. influence</a> of academic
+                publications.</p>
+        </div>
+    </div>
+    <div id="app" class="fix fullscreen">
+    </div>
+    <div id="empt-app" class="fixempty fullscreen"></div>
+    <div id="lineChart_desc" class="fullscreen">
+        <div class="content-box">
+            <div id="resbox" class="box whitebox draggable">
+                <div class="dragbutton"><img src="img/move.svg" width="20" height="20" /></div>
+                <h4>How to use the application</h4>
+                <p>Each point depicts the globalization index $G^S_{c,d,y,i}$ of a respective country and discipline in a given year and indicator.
+                    For more details see the definition of the <a class="modalLink" onclick="showMethodModal('euclid')">journal-level indicators</a>
+                    and <a class="modalLink" onclick="showModal('modFramework')">aggregation procedure</a>. </p>
+
+                <p>Use the upper dropdown menus to customize the output. One can compare either:</p>
+                    <ul>
+                        <li><a class="modalLink" onclick="showModal('modCountries')">countries</a> within a discipline, or </li>
+                        <li><a class="modalLink" onclick="showModal('modDisciplines')">disciplines</a> within a country. </li>
+                    </ul>
+                <p>The main dimension is fixed by the button <img src="img/comparison.svg" width="20" height="20" />. Up to
+                    10 items can be included in the comparison.</p>
+
+                <p>You may move the text windows by dragging the button <img src="img/move.svg" width="20" height="20" />
+                    in the top-left corner.</p>
+            </div>
+        </div>
+    </div>
+    <div class="fixempty fullscreen"></div>
+
+    <div id="caveats" class="flow flowtitle">
+        <div class="content">
+            <h3>Bear in mind while using</h3>
+            <ul>
+                <li>The globalization indexes are standardized between 0 and 1 across all countries (174), narrow
+                    disciplines (27) and years (13).</li>
+                <li>Large year-by-year jumps in some series can be driven by adding (or removing) important journals in Scopus.</li>
+                <li>Results for country groups are computed as simple averages of member countries. Germany has the same
+                    weight as Luxembourg, etc. </li>
+                <li>Results for broad and narrow disciplines are calculated separately from scratch; the former are not
+                    simply aggregations of the latter.</li>
+                <li>Only data on the following document types are taken into account: journal articles, reviews, and conference papers.</li>
+                <li>Journals are fully counted in each discipline to which they are assigned. Large interdisciplinary
+                    journals may affect the results for smaller disciplines.</li>
+                <li>Comparison of indicators within a country or a discipline could be misleading, hence not provided.</li>
+                <li>The Gini-Simpson and Local Authors indicators do not take into account the research sector size in the estimation.</li>
+                <li>For the sake of robustness, only journals with at least 30 documents in the given year are included
+                    in the calculation.</li>
+                <li>Only results of the aggregation to countries and disciplines based on data from at least 30
+                    journals are reported.</li>
+                <li>Smaller countries and disciplines suffer from gaps in the displayed results due to insufficient data.</li>
+                <li>Results for smaller countries and disciplines based on relatively thin data should be interpreted with caution.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="fixempty fullscreen"></div>
+
+    <div id="broad" class="flow flowtitle">
+        <div class="content">
+            <h3>Broad picture</h3>
+        </div>
+    </div>
+    <div class="fixempty fullscreen"></div>
+
+
+
+    <div class="fullscreen">
+        <div class="content-box">
+            <div class="box whitebox draggable">
+                <div class="dragbutton"><img src="img/move.svg" width="20" height="20" /></div>
+
+                <h4>Transition outsiders</h4>
+                <p>Science in advanced countries has traditionally been globalized.</p>
+                <p>In contrast, transition countries continue to be relatively isolated.</p>
+                <p>Developing countries remain in the middle and close to the world average.</p>
+                <p>Interestingly, there does not seem to be much change here.</p>
+                <p class="tip">Tip: Display the discipline of your interest using the upper menu.
+                    For the definition of country groups see the note below the figure.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="big7" class="flow flowtitle">
+        <div class="content">
+            <h3>Big 7</h3>
+        </div>
+    </div>
+    <div class="fixempty fullscreen"></div>
+
+
+    <div class="fullscreen">
+        <div class="content-box">
+            <div class="box whitebox draggable">
+                <div class="dragbutton"><img src="img/move.svg" width="20" height="20" /></div>
+                <h4>The contrast of China and Russia</h4>
+                <p>Not surprisingly, the Unites States, jointly with the EU-28, set the upper standard, followed by Japan.</p>
+                <p>China scores last initially, but then globalizes its science base enormously, eventually
+                    converging to a similar level as Brazil and India.</p>
+                <p>Russia starts and remains low, lagging increasingly behind the rest of the pack.</p>
+                <p class="tip">Tip: Add (or remove) countries (or country groups) using the upper menu. Replace the EU-28
+                    average by individual member countries of your interest. </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="top5bottom5" class="flow flowtitle">
+        <div class="content">
+            <h3>Bottom 10</h3>
+        </div>
+    </div>
+    <div class="fixempty fullscreen"></div>
+    <div class="fullscreen">
+        <div class="content-box">
+            <div class="box whitebox draggable">
+                <div class="dragbutton"><img src="img/move.svg" width="20" height="20" /></div>
+                <h4>The least globalized (period average)</h4>
+                <p>Not only Russia, but also other former members of the Soviet bloc, cluster at the bottom of the worldwide ranking.</p>
+                <p>Chinese science in fact turns out to be the least globalized in the whole world initially.</p>
+                <p class="tip">Tip: Replace China by other former members of the Soviet bloc to see how they fare in comparison to the world average.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="advanced" class="flow flowtitle">
+        <div class="content">
+            <h3>Advanced countries by disciplines</h3>
+        </div>
+    </div>
+    <div class="fixempty fullscreen"></div>
+    <div class="fullscreen">
+        <div class="content-box">
+            <div class="box whitebox draggable">
+                <div class="dragbutton"><img src="img/move.svg" width="20" height="20" /></div>
+
+                <h4>Consistently global</h4>
+                <p>In advanced countries, science is, on average, highly globalized across disciplines.</p>
+                <p>Physical and Life Sciences are the most globalized. Health Sciences rank even below Social Sciences,
+                    though the differences are very small.</p>
+                <p>In fact, it is difficult to find a sub-discipline that deviates significantly from this narrow corridor.</p>
+                <p class="tip">Tip: Add the sub-disciplines of your interest using the upper menu. For the definition of
+                    disciplines, see the note below the figure.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="russia" class="flow flowtitle">
+        <div class="content">
+            <h3>Russia by disciplines</h3>
+        </div>
+    </div>
+    <div class="fixempty fullscreen"></div>
+    <div class="fullscreen">
+        <div class="content-box">
+            <div class="box whitebox draggable">
+                <div class="dragbutton"><img src="img/move.svg" width="20" height="20" /></div>
+                <h4>Science of its own</h4>
+                <p>Russian science does not ever break from its inward-looking Soviet past, regardless of the discipline.</p>
+                <p>Russian Physical and Life Sciences remain significantly less globalized than elsewhere in the world.</p>
+                <p>The only major exception is the sub-discipline of Pharmacology, Toxicology and Pharmaceutics.</p>
+                <p>Interestingly, in many disciplines this is in a sharp contrast to the relatively high
+                    share of documents published in English.</p>
+                <p>In fact, about four-fifths of documents with at least one author from Russia were written
+                    in English over this period.</p>
+                <p class="tip">Tip: Display results for a different indicator using the upper menu.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="china" class="flow flowtitle">
+        <div class="content">
+            <h3>China by disciplines</h3>
+        </div>
+    </div>
+    <div class="fixempty fullscreen"></div>
+    <div class="fullscreen">
+        <div class="content-box">
+            <div class="box whitebox draggable">
+                <div class="dragbutton"><img src="img/move.svg" width="20" height="20" /></div>
+
+                <h4>From zero to hero</h4>
+                <p>China has profoundly globalized its science system, gradually moving from the lowest globalization
+                    rates to prominence on the world stage.</p>
+                <p>Chinese Social Sciences have become even more globalized than other broad disciplines and have already caught up
+                    with the EU-28 and the world average.</p>
+                <p>In some sub-disciplines, China has already surpassed the United States and is steaming forward to the top ranking.</p>
+                <p>If the trend continues, China will soon eliminate the gap with advanced countries in most of the sub-disciplines.</p>
+                <p class="tip">Tip: Compare the results for Hong Kong using the upper menu (the results for China
+                    do not include Hong Kong, which continues to be reported separately by Scopus).</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="socialCentralWesternEurope" class="flow flowtitle">
+        <div class="content">
+            <h3>Social Sciences in Central and Western Europe</h3>
+        </div>
+    </div>
+    <div class="fixempty fullscreen"></div>
+    <div class="fullscreen">
+        <div class="content-box">
+            <div class="box whitebox draggable">
+                <div class="dragbutton"><img src="img/move.svg" width="20" height="20" /></div>
+
+                <h4>Social Sciences in question</h4>
+                <p>In Western Europe, Social Sciences are highly globalized, as are Natural Sciences.</p>
+                <p>In Central (and Eastern) Europe, however, Social Sciences continue to maintain their own local publication silos.</p>
+                <p>The prime exception is Hungary, where Social Sciences used to be more oriented to the West even before the
+                    fall of the Berlin Wall.</p>
+                <p class="tip">Tip: Add other transition countries (or the group average) to the comparison using the upper menu.</p>
+            </div>
+        </div>
+    </div>
+    <div id="czechia" class="flow flowtitle">
+        <div class="content">
+            <h3>Czechia by disciplines</h3>
+        </div>
+    </div>
+    <div class="fixempty fullscreen"></div>
+    <div class="fullscreen">
+        <div class="content-box">
+            <div class="box whitebox draggable">
+                <div class="dragbutton"><img src="img/move.svg" width="20" height="20" /></div>
+
+                <h4>Czechia in the spotlight</h4>
+                <p>Czechia is a prime example of a formerly advanced country that have been tarnished during the communist era.</p>
+                <p>Physical and Life Sciences have continued to be connected to the global arena.</p>
+                <p>Social Sciences have been locked behind the Berlin Wall; they steadily globalize,
+                    but from a low base, and there is still a long way to go.</p>
+                <p class="tip">Tip: Explore other countries of the former Soviet bloc using the upper menu.
+                    Note, for instance, the development in Ukraine.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="map" class="flow flowtitle">
+        <div class="content">
+            <h3>Map</h3>
+        </div>
+        <div id="mapCont"></div>
+    </div>
+    <div class="fixempty fullscreen"></div>
+
+
+    <div id="conclusion" class="flow flowtitle">
+        <div class="content">
+            <h3>Concluding remarks</h3>
+            <p>Globalization of science provides a new perspective on the scientific landscape, which deepens what we know
+                from standard bibliometrics in many respects.</p>
+
+            <p>The traditional science powerhouses in the North and West remain strong and at the core of the global
+                system; highly interconnected and as globalized as ever.</p>
+
+            <p>In many countries of the former Soviet block, the low globalization of science is a symptom of a systemic failure;
+                of science that is out of sync with the rest of the world and is inefficient.</p>
+
+            <p>After the fall of the Berlin Wall, it was understandable that science in transition countries would need time
+                to catch up. In many disciplines, new infrastructure had to be built from scratch. However, three decades on,
+                there is no longer any excuse.</p>
+
+            <p>China shows that where there is a will, there is a way. In little more than a decade, Chinese science has moved from
+                relative isolation to the front pages of global journals amid an enormous expansion in size.</p>
+
+            <p>Other developing countries also allocate increasing resources to science and run the risk of creating
+                ecosystems of local publishing similar to transition countries, or worse, e.g. falling for predatory journals.</p>
+
+            <p>Globalization of science that is pervasively lower than in similar countries should be a cause for concern,
+                as it suggests that the science system has gone astray and needs an overhaul of its evaluation and funding framework.</p>
+
+            <p>More research is needed to better understand globalization of science. Does globalization of the national
+                science system go hand in hand with quality and impact? Are there spillovers outside of the realm of science?
+                What can be done about it?</p>
+
+            <p class="tip">Tip: Spend more time with the interactive app to explore the position of the country and discipline
+                of your interest.</p>
+        </div>
+    </div>
+
+    <div class="fixempty fullscreen"></div>
+
+    <div id="thanks" class="flow">
+        <div class="content">
+            <h1 id="thankstitle">Thanks for your attention!</h1>
+
+            <a href="https://idea-en.cerge-ei.cz/" target="_blank"><img src="img/IDEA_greybcg.svg" class="logo"/></a>
+            <a href="http://www.avcr.cz/en/strategy/research-programmes/programmes-of-strategy-av21/index.html" target="_blank" ><img src="img/Logo_Strategy_V3m.svg" class="logo"/></a>
+            <h2 >If you liked it, do not forget to share!</h2>
+
+            <div id="shares">
+                <a id="fb" target="_blank" href=""><img src="img/fb.svg" /></a>
+                <a id="tw" target="_blank" href=""><img src="img/twitter2.svg" /></a>
+                <a id="li" target="_blank" href=""><img src="img/linkedin.svg" /></a>
+                <a id="mail" href=""><img src="img/mail.svg" /></a>
+                <a onclick="showCopyLink()"><img src="img/link.svg" /></a>
+            </div>
+
+            <p>See full <a class="modalLink" onclick="showModal('modReferences')">list of references</a> </p>
+
+
+            <p class="footnote">Recommended citation: <a class="modalLink" onclick="showModal('modMy')">Macháček, V. and Srholec, M.</a> (2019) Globalization of Science: Evidence from Authors in Academic Journals by Country of Origin. IDEA Study 6/2019. Institute for Democracy and Economic Analysis (IDEA), CERGE-EI, Prague.</p>
+            <p class="footnote">Acknowledgement: Financial support from the research programme Strategy AV21 of the Czech
+                Academy of Sciences is gratefully acknowledged. All usual caveats apply.</p>
+            <p class="footnote">Note: This study represents only the views of the authors and not the official position of the Economics
+                Institute of the Czech Academy of Sciences or the Center for Economic Research and Graduate Education (CERGE), Charles University.</p>
+            <br />
+        </div>
+    </div>
+
+
+    <div id="modalWrap" class="modalBackground">
+        <div id="mainFig_wrap" class="modal">
+            <div class="close" onclick="hideModal()"><img src="img/closeIcon3.svg"/></div>
+            <div class="modalBody">
+                <div><img class="figImg" src="img/mainFigure.PNG" width="800px"/></div>
+            </div>
+        </div>
+
+
+        <div id="modLocalJournals" class="modal">
+            <div class="close" onclick="hideModal()"><img src="img/closeIcon3.svg"/></div>
+            <div class="modalBody">
+                <h3>Local Journals in Scopus</h3>
+                <p>In this study, we analyzed local academic publishing in selected European countries over the 2013-2016 period.</p>
+                <p>The results reveal a strong tendency to publish locally in the former communist countries. Local
+                    journals are prevalent in Croatia, Romania, Slovenia, Lithuania, and Czechia, but are rather rare in
+                    comparable advanced countries. </p>
+                <p>In Czechia, for instance, nearly one fifth of all indexed results are concentrated in Czech journals,
+                    with a high percentage (>33%) of articles by domestic authors. About half of authors contributing to
+                    Czech journals are based in Czechia, and another tenth in Slovakia.</p>
+                <p>In contrast, the vast majority of articles that appear in journals published in comparable advanced
+                    countries are written by foreign authors. The publishing of local, or at best regional, journals appears
+                    to be a distinctly Eastern European phenomenon.</p>
+                <div class="figWrap" align="center">
+                    <div class="figHeader">Local journals in selected EU and OECD countries (2013-2016)</div>
+                    <div class="figSubtitle">(% of authors from the same country as the journal publisher)</div>
+                    <div><img class="figImg" src="img/localJournals.png" width="800px"/></div>
+                    <div class="figFooter">Note: Number of active journals with more than 30 articles over the 2013-2016 period;
+                        number of researchers in the latest available year in full-time equivalent (FTE).</div>
+                    <div class="figFooter">Source: Scopus (April and October 2017), Eurostat, OECD, Scimago, authors' calculations.</div>
+                </div>
+                <p><span style="font-variant: small-caps;">Macháček, V. and Srholec, M. (2017)</span>
+                    <a href="https://idea.cerge-ei.cz/files/IDEA_Studie_17_2017_Mistni_casopisy_ve_Scopusu/mobile/index.html" target="_blank">
+                        Local Journals in Scopus</a> (only in Czech).<i> Institute for Democracy and Economic Analysis (IDEA)</i>, Study 17/2017.</p>
+
+                <center><a onclick="hideModal()" class="button buttonActive">Hide</a></center>
+
+
+            </div>
+        </div>
+
+        <div id="modPredators" class="modal">
+            <div class="close" onclick="hideModal()"><img src="img/closeIcon3.svg"/></div>
+            <div class="modalBody">
+                <h3>Predatory Journals in Scopus</h3>
+                <p>In this study, we mapped patterns of predatory publishing across the globe over the 2015-2017 period.</p>
+                <p>The analysis is based on Beall's lists of "potentially predatory" journals and publishers, of which
+                    we found 3,218 journals in Ulrichsweb and 405 journals in Scopus.</p>
+                <p>The results show that predatory publishing has become most widespread in middle-income countries in
+                    Asia and North Africa. </p>
+                <p>However, the analysis also indicates that Beall’s lists need to be used with caution, as some of the
+                    implicated journals may not be necessarily fraudulent in the strict sense.</p>
+
+                <div class="figHeader">Share of predatory articles on the total number of articles (2015-2017)</div>
+                <div><img class="figImg" src="img/predators.JPG" width="800px"/></div>
+                <div class="figFooter">Note: Articles in journals published by the Frontiers Research Foundation are excluded from predatory publications.</div>
+                <div class="figFooter">Scopus (October 2016), Beall's lists (April 2016), authors' calculations. </div>
+
+                <p><span style="font-variant: small-caps;">Macháček, V. and Srholec, M. (2016)</span>
+                    <a href="https://idea-en.cerge-ei.cz/files/IDEA_Study_2_2017_Predatory_journals_in_Scopus/mobile/index.html" target="_blank">Predatory Journals in Scopus</a>.
+                    <i>Institute for Democracy and Economic Analysis (IDEA)</i>, Study 2/2017.</p>
+                <center><a onclick="hideModal()" class="button buttonActive">Hide</a></center>
+            </div>
+        </div>
+        <div id="modQuantityInfluence" class="modal">
+            <div class="close" onclick="hideModal()"><img src="img/closeIcon3.svg"/></div>
+            <div class="modalBody">
+                <h3>International Comparison of Academic Publication Output and its Influence</h3>
+                <p>The study compares quantity and influence of publication output of countries in Web of Science (WoS)
+                    by category over the 2012-2016 period.</p>
+                <p>The quantity is given by the number of scientific articles and the influence is inferred from Article
+                    Influence Score (AIS) of the journals they are published in.</p>
+                <p>For each WoS category, the output and influence of the country is benchmarked relative to the chosen set of other countries.</p>
+                <p>The results reveal that both the size and influence of research in most Central and Eastern European countries
+                    continue to lag behind Western Europe.</p>
+                <p>This gap is especially strong in <i>Social Sciences</i>, <i>Medical and Health Sciences</i>, and <i> Arts and Humanities</i></p>
+                <p>See the <a href="https://ideaapps.cerge-ei.cz/Comparison/#" target="_blank">interactive application</a>.</p>
+                <div class="figHeader">Academic Publication Output and its Influence in Czechia (2012-2016)</div>
+                <div><img class="figImg" src="img/quantityInfluence.PNG" width="800px"/></div>
+                <div class="figFooter">Note: Each dot represent one WoS category; Only articles from the first quartile
+                    are taken into account; all available countries are used as benchmark.</div>
+
+                <p><span style="font-variant: small-caps;">Jurajda, Š., Kozubek, S., Münich, D. and Škoda, S. (2017)</span>
+                    <a href="http://dx.doi.org/10.1007/s11192-017-2389-8" target="_blank">Scientific publication performance
+                        in post communist countries: still lagging far behind</a>.
+                    <i>Scientometrics</i>, 112(1). p. 315-328</p>
+                <center><a onclick="hideModal()" class="button buttonActive">Hide</a></center>
+            </div>
+        </div>
+
+        <div id="modReferences" class="modal">
+            <div class="close" onclick="hideModal()"><img src="img/closeIcon3.svg"/></div>
+            <div class="modalBody">
+                <h3>References</h3>
+                <p><span style="font-variant: small-caps;">Aman, V. (2016)</span>
+                    <a href="http://ocs.editorial.upv.es/index.php/STI2016/STI2016/paper/viewFile/4543/2327" target="_blank">Measuring internationality without bias against the periphery</a>,
+                    <i>Proceedings of the 21st international conference on science and technology indicators</i>, p. 1042-1050.</p>
+
+                <p><span style="font-variant: small-caps;">Buela-Casal, G., Perakakis, P., Taylor, M. and Checa, P. (2006)</span>
+                    <a href="https://link.springer.com/article/10.1007/s11192-006-0050-z" target="_blank">Measuring internationality: Reflections and perspectives on academic journals</a>,
+                    <i>Scientometrics</i>, 67(1), p.45-65.</p>
+
+                <p><span style="font-variant: small-caps;">IMF (2003)</span> <a href="https://www.imf.org/external/pubs/ft/weo/2003/02/" target="_blank">World
+                    Economic Outlook</a>  (Statistical Appendix; pp. 163-169).</p>
+
+                <p><span style="font-variant: small-caps;">Jurajda, Š., Kozubek, S., Münich, D. and Škoda, S. (2017)</span>
+                    <a href="http://dx.doi.org/10.1007/s11192-017-2389-8" target="_blank">Scientific publication performance
+                        in post communist countries: still lagging far behind</a>.
+                    <i>Scientometrics</i>, 112(1). p. 315-328</p>
+
+                <p><span style="font-variant: small-caps;">Macháček, V. and Srholec, M. (2016)</span>
+                    <a href="https://idea-en.cerge-ei.cz/files/IDEA_Study_2_2017_Predatory_journals_in_Scopus/files/downloads/IDEA_Study_2_2017_Predatory_journals_in_Scopus.pdf" target="_blank">Predatory Journals in Scopus</a>,
+                    <i>Institute for Democracy and Economic Analysis (IDEA)</i>, Study 2/2017.</p>
+
+                <p><span style="font-variant: small-caps;">Macháček, V. and Srholec, M. (2017)</span>
+                    <a href="https://idea.cerge-ei.cz/files/IDEA_Studie_17_2017_Mistni_casopisy_ve_Scopusu/mobile/index.html" target="_blank">
+                        Local Journals in Scopus</a> (only in Czech).<i> Institute for Democracy and Economic Analysis (IDEA)</i>, Study 17/2017.</p>
+
+                <p><span style="font-variant: small-caps;">World Bank (2018)</span> <a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/378834-how-does-the-world-bank-classify-countries" target="_blank">How does the World Bank classify countries?</a> (version of June 2018). Accessed on March 15th 2019.
+
+                <p><span style="font-variant: small-caps;">Zitt, M. and Bassecoulard, E. (1998)</span>
+                    <a href="https://link.springer.com/article/10.1007/BF02457982" target="_blank">Internationalization of scientific journals: a measurement based on publication and citation scope</a>,
+                    <i>Scientometrics</i>, 41(1–2) 255–271.</p>
+
+                <p><span style="font-variant: small-caps;">Zitt, M. and Bassecoulard, E. (1999)</span>
+                    <a href="https://link.springer.com/article/10.1007/BF02459619" target="_blank">Internationalization of communication a view on the evolution of scientific journals</a>,
+                    <i>Scientometrics</i>, 46(3) 669-685.</p>
+
+                <center><a onclick="hideModal()" class="button buttonActive">Hide</a></center>
+            </div>
+        </div>
+
+
+        <div id="modScopus" class="modal">
+            <div class="close" onclick="hideModal()"><img src="img/closeIcon3.svg"/></div>
+            <div class="modalBody">
+                <h3>Database</h3>
+                <p><a href="xls/ext_list_April_2018_2017_Metrics.xlsx" target="_blank" >Scopus Source List</a> (April 2018 version) provided International Standard
+                    Serial Numbers (ISSNs), classification by disciplines, and publisher’s domicile of 34,964 academic journals.</p>
+                <p>In August 2018, detailed data on authors by the country of origin and language of documents in these
+                    ISSNs were downloaded from the <a href="https://www.scopus.com/" target="_blank">Scopus</a> citation database over the period from 2005 to 2017.</p>
+                <p>Only the following document types are included in this analysis: journal articles, reviews, and conference papers, i.e. so-called “citable
+                    documents”.</p>
+                <p>The following Scopus API request was used to download the data:</p>
+                <blockquote>ISSN(AAAA-BBBB) AND DOCTYPE(AR OR RE OR CP) AND PUBYEAR = YYYY</blockquote>
+                <p>in which <i>AAAA-BBBB</i> is the journal's ISSN and <i>YYYY</i> is the year.</p>
+                <center><a onclick="hideModal()" class="button buttonActive">Hide</a></center>
+            </div>
+        </div>
+
+        <div id="modCountries" class="modal">
+            <div class="close" onclick="hideModal()"><img src="img/closeIcon3.svg"/></div>
+            <div class="modalBody">
+                <h3>Countries</h3>
+                <p>Of 240 countries and territories, for which at least some information is available, we have excluded
+                    entities that are either dependent territories, too small, and/or with too few data to derive reliable results.</p>
+                <p>The resulting sample consists of 174 countries, including a large number of developing and transition
+                    countries, which together cover the overwhelming majority of the world's population and research output.</p>
+                <p>Data with "undefined" country origin of authors (about 5% of observations) has been excluded from the analysis.
+                    Data for Yugoslavia before 2007 were added to Serbia.</p>
+                <center><a onclick="hideModal()" class="button buttonActive">Hide</a></center>
+            </div>
+        </div>
+        <div id="modCountryGroups" class="modal">
+            <div class="close" onclick="hideModal()"><img src="img/closeIcon3.svg"/></div>
+            <div class="modalBody">
+                <h3>Country groups</h3>
+
+                <h5>Development status</h5>
+                <p><b>Advanced countries</b>: Australia, Austria, Belgium, Canada, Cyprus, Denmark, Finland, France, Germany, Greece, Hong Kong,
+                    Iceland, Ireland, Israel, Italy, Japan, Liechtenstein, Luxembourg, Monaco, Netherlands, New Zealand,
+                    Norway, Portugal, Singapore, South Korea, Spain, Sweden, Switzerland, Taiwan, United Kingdom, United States.</p>
+                <p><b>Transition countries</b>: Albania, Armenia, Azerbaijan, Belarus, Bosnia and Herzegovina, Bulgaria, Croatia, Czechia, Estonia,
+                    Georgia, Hungary, Kazakhstan, Kyrgyzstan, Latvia, Lithuania, Macedonia, Moldova, Mongolia, Montenegro,
+                    Poland, Romania, Russia, Serbia, Slovakia, Slovenia, Tajikistan, Turkmenistan, Ukraine, Uzbekistan.
+                <p><b>Developing countries</b>: Rest of the world.</p>
+                <p>Source: <span style="font-variant: small-caps;">IMF (2003)</span> <a href="https://www.imf.org/external/pubs/ft/weo/2003/02/" target="_blank">World
+                    Economic Outlook</a>  (Statistical Appendix; pp. 163-169).</p>
+                <h5>Income</h5>
+                <p><strong>High income</strong>, <strong>Upper middle income</strong>, <strong>Lower middle income</strong>
+                    and <strong>Low income</strong> depending on Gross National Income (GNI) per capita in US dollars (Atlas methodology).</p>
+                <p>Source: <span style="font-variant: small-caps;">World Bank (2018)</span> <a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/378834-how-does-the-world-bank-classify-countries" target="_blank">How does the World Bank classify countries?</a>
+                    (June 2018 version).</p>
+                <h5>Regions</h5>
+                <p><strong>Europe</strong>, <strong>North America</strong>, <strong>South America</strong>, <strong>Central Asia</strong>,
+                    <strong>Middle East</strong>, <strong>East Asia</strong>, <strong>South Asia</strong>, <strong>Pacific</strong>,
+                    <strong>North Africa</strong>, <strong>Sub-Saharan Africa</strong> based on geography and administrative borders.</p>
+                <p>Source: <span style="font-variant: small-caps;">World Bank (2018)</span> <a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/378834-how-does-the-world-bank-classify-countries" target="_blank">How does the World Bank classify countries?</a>
+                    (June 2018 version).</p>
+                <h5>Other</h5>
+                <p><strong>EU-15</strong>: "Old" EU member countries (before 2004).</p>
+                <p><strong>EU-13</strong>: "New" EU member countries (accession between 2004 and 2018).</p>
+                <p><strong>EU-28</strong>: EU-15 and EU-13 combined.</p>
+                <p><strong>OECD</strong>: OECD member countries (as of January 2019).</p>
+                <center><a onclick="hideModal()" class="button buttonActive">Hide</a></center>
+            </div>
+        </div>
+
+        <div id="modDisciplines" class="modal">
+            <div class="close" onclick="hideModal()"><img src="img/closeIcon3.svg"/></div>
+            <div class="modalBody">
+                <h3>Disciplines</h3>
+                <p>According to the <a href="xls/ext_list_April_2018_2017_Metrics.xlsx" target="_blank">Scopus Journal Classification</a>
+                    journals are classified into the following 4 broad subject clusters:</p>
+                    <ol>
+                        <li>Life Sciences,</li>
+                        <li>Physical Sciences,</li>
+                        <li>Health Sciences,</li>
+                        <li>Social Sciences,</li>
+                    </ol>
+                <p>which are further subdivided into 27 major subject areas, such as:</p>
+                <p class="listlike">1.1 Agricultural and Biological Sciences,</p>
+                <p class="listlike">1.2 Biochemistry, Genetics and Molecular Biology,</p>
+                <p class="listlike">1.3 Immunology and Microbiology,</p>
+                <p class="listlike">1.4 Neuroscience,</p>
+                <p class="listlike">1.5 Pharmacology, Toxicology and Pharmaceutics,</p>
+                <p>etc.</p>
+                <p>If a journal is assigned to multiple categories, it is fully counted in each of them.</p>
+                <center><a onclick="hideModal()" class="button buttonActive">Hide</a></center>
+            </div>
+        </div>
+
+        <div id="modJournals" class="modal">
+            <div class="close" onclick="hideModal()"><img src="img/closeIcon3.svg"/></div>
+            <div class="modalBody">
+                <h3>Journals</h3>
+                <p>The <a class="modalLink" onclick="hideAndShowModal('modScopus')" >Scopus Source List</a> is a source of journals.</p>
+                <p>Both active and inactive academic journals with ISSN are considered. We downloaded 34 965 ISSNs for
+                    each year from 2005 - 2017.</p>
+                <p>Only articles, reviews and conference papers are included in this analysis.</p>
+                <p>The following Scopus API request was used to download the data in August 2018:</p>
+                <blockquote>ISSN(AAAA-BBBB) AND DOCTYPE(AR OR RE OR CP) AND PUBYEAR = YYYY</blockquote>
+                <p>where <i>AAAA-BBBB</i> is the journal's ISSN and <i>YYYY</i> is the year.</p>
+                <center><a onclick="hideModal()" class="button buttonActive">Hide</a></center>
+            </div>
+        </div>
+
+        <div id="modFramework" class="modal">
+            <div class="close" onclick="hideModal()"><img src="img/closeIcon3.svg" /></div>
+            <div class="modalBody">
+                <h3>Aggregation to countries and disciplines</h3>
+
+                <p>Following <a href="https://link.springer.com/article/10.1007/BF02459619" target="_blank">Zitt and Bassecoulard (1999)</a>, the evidence from journals
+                    is aggregated to the level of countries and disciplines.</p>
+
+                <p>The aggregated figures are calculated as an average of the
+                    <a class="modalLink" onclick="hideAndShowModal('modMethods')">journal-level indicator</a> weighted by
+                    the journal's share on the country's total documents in the respective discipline.</p>
+                <p>Only the results of the aggregation procedure based on data from at least 30 journals are reported.</p>
+
+                <h4>Definitions</h4>
+                <p>Globalization of science in the country $c$, discipline $d$ and year $y$ measured by the indicator $i$
+                    is calculated as follows:</p>
+                $$
+                G_{c,d,y,i} = \sum_{j=1}^{J} a_{c,d,y,j} g_{j,d,y,i}(.)
+                $$
+                <p>$a_{j,c,d,y}$ is the share of documents with authors from the country $c$ in journal $j$ on all
+                    documents of the country $c$ in discipline $d$ in year $y$.</p>
+
+                <p>$g_{j,d,y,i}$ is the globalization indicator $i$ of journal $j$ in discipline $d$ and year $y$.</p>
+
+
+                <h4>Standardization and scaling</h4>
+                <p>Subsequently, the aggregated globalization index was standardized between $0$ and $1$ and converted
+                    to an ascending scale to simplify the interpretation of the results:</p>
+                $$
+                G_{c,d,y,i}^S = \frac{G_{c,d,y,i} - G_{i}^{min}}{G_{i}^{max} - G_{i}^{min}} \alpha_i
+                $$
+                <p>in which $G_{i}^{min}$ and $G_{i}^{max}$ is the minimum and maximum value of the indicator $i$ across all years,
+                    countries, and disciplines and $\alpha_i$ equals $-1$ for the minimizing indicator (i.e. low values for
+                    high globalization) and $1$ otherwise, as the results of which $0$ refers to the lowest and $1$
+                    to the highest globalization.
+
+                </p>
+            </div>
+            <center><a onclick="hideModal()" class="button buttonActive">Hide</a></center>
+        </div>
+
+        <div id="modMethods" class="modal">
+            <div class="close" onclick="hideModal()"><img src="img/closeIcon3.svg" /></div>
+            <div class="modalBody" >
+                <h3>Journal Globalization Indicators</h3>
+                <p>The methodology builds on the pioneering work of <a href="https://link.springer.com/article/10.1007/BF02457982" target="_blank">Zitt and Bassecoulard (1998)</a>, which we complement
+                    with the contributions by <a href="https://link.springer.com/article/10.1007/s11192-006-0050-z" target="_blank">Buela-Casal et al. (2006)</a>, <a href="http://ocs.editorial.upv.es/index.php/STI2016/STI2016/paper/viewFile/4543/2327" target="_blank">Aman (2016)</a>
+                    and two indicators of our own.</p>
+                <p>In essence, the most globalized journals have a structure (of documents by the country of origin of
+                    authors, etc.) that closely resembles the global structure of the whole discipline and vice-versa.</p>
+                <p>Only journals with at least 30 documents in the particular year are included in the calculation.</p>
+                <h4>Definitions</h4>
+                <p>$N_{c,j,y}$ and $N_{c,d,y}$ is the number of documents with authors affiliated to the country $c$ in
+                    journal $j$ and discipline $d$, respectively, in year $y$.</p>
+                <p>$N_{LOCAL,j,y}$ is the number of documents with authors from the same country as the publisher of journal $j$
+                    in year $y$.</p>
+                <p>$N_{ENG,j,y}$ is the number of English-written documents in the journal $j$ in year $y$.</p>
+                <p>$T_{j,y}$ denotes the total number of documents published in the journal $j$ in year $y$.</p>
+                <p>Note: Documents by authors from multiple countries are fully attributed to each country, i.e. $T_{j,y} \neq \sum_c N_{c,j,y}$.</p>
+
+                <h4 class="pretext">Indicators: </h4>
+                <div id="swMethods" class="switcher">
+                    <span id="sweuclid" class="switchCol switchActive" onclick="displayMethod('euclid')">Euclid</span>
+                    <span id="swGiniSimpson" class="switchCol" onclick="displayMethod('GiniSimpson')">GiniSimpson</span>
+                    <span id="swweightGini" class="switchCol" onclick="displayMethod('weightGini')">Weighted Gini</span>
+                    <span id="swtop3" class="switchCol" onclick="displayMethod('top3')">Largest Contributors</span>
+                    <span id="swlocalShare" class="switchCol" onclick="displayMethod('localShare')">Local Authors</span>
+                    <span id="swshareEnglish" class="switchCol" onclick="displayMethod('shareEnglish')">English Documents</span>
+                </div>
+                <div id="methodDetails">
+                    <h5><span id="methodName"></span></h5>
+                    <p id="methodDescription"></p>
+                </div>
+            </div>
+            <center><a onclick="hideModal()" class="button buttonActive">Hide</a></center>
+
+        </div>
+
+        <div id="modMy" class="modal">
+            <div class="close" onclick="hideModal()"><img src="img/closeIcon3.svg" /></div>
+            <div class="modalBody" style="padding:0vw 20vw;">
+                <h3>Authors</h3>
+                <h4>Vítek Macháček</h4>
+                <img src="img/vitek_final.JPG" class="imgMy right">
+                <p>E-mail: <a href="mailto:vit.machacek@cerge-ei.cz" >vit.machacek@cerge-ei.cz</a></p>
+                <p>Vít Macháček has worked at the Institute for Democracy and Economic Analysis (IDEA) since 2015.
+                    He obtained his Mgr. degree from the Institute of Economic Studies at Charles University in 2016,
+                    where he is currently pursuing his Ph.D. Until 2018, he also worked as a Macroeconomic and Finance Analyst
+                    at Česká spořitelna. Vítek's research interests include the Economics of Innovation, Scientometrics,
+                    and European Integration. </p>
+                <br />
+                <h4>Martin Srholec</h4>
+                <img src="img/martin_final.JPG" class="imgMy left">
+                <p>E-mail: <a href="mailto:martin.srholec@cerge-ei.cz" >martin.srholec@cerge-ei.cz</a></p>
+                <p>Martin Srholec obtained his Ph.D from the Faculty of Economics at University of Economics and  the
+                    Centre for Technology, Innovation and Culture at the University of Oslo. Since 2010, he has worked
+                    as a researcher at CERGE-EI in Prague. Between 2011 and 2017, he also worked at the Centre for Innovation,
+                    Research and Competence in the Learning Economy (CIRCLE) in Lund. Martin has worked at the Institute for
+                    Democracy and Economic Analysis since 2013. His research interests include Economics of Innovation,
+                    Innovation Systems and Innnovation Policy.</p>
+            </div>
+            <center><a onclick="hideModal()" class="button buttonActive">Hide</a></center>
+
+        </div>
+
+
+        <div id="modRozliseni" class="modal">
+            <div class="modalBody">
+                <h3>Low resolution</h3>
+                <p>Unfortunately, this website is not suitable for low-resolution screens. We recommend reading on desktop, laptops or tablets at least.
+                    Reading on smartphones is prohibited as the screen is simply too small.</p>
+            </div>
+        </div>
+        <div id="modSpecialDevice" class="modal">
+            <div class="modalBody">
+                <h3>Caution</h3>
+                <p>This application is optimized for laptops and desktops. Errors may occur on smartphones, tablets and other devices. We are sorry for any inconvenience.</p>
+                <center><a onclick="hideModal()" class="button buttonActive">Hide</a></center>
+
+            </div>
+        </div>
+
+
+        <div id="modCopyLink" class="modal">
+            <div class="close" onclick="hideModal()"><img src="img/closeIcon3.svg" /></div>
+            <div class="modalBody">
+                <h3>Copy link</h3>
+                <div style="margin:30px;">
+                    <input type="text" value="" class="urlField">
+
+                    <button onclick="copyLink('#modCopyLink .urlField','#modCopyLink .linkCopied')" class="button buttonActive">Copy</button>
+                    <span class="linkCopied" >Link copied.</span>
+                </div>
+                <center><a onclick="hideModal()" class="button buttonActive">Hide</a></center>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>

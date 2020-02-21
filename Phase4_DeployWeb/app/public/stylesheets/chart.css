@@ -1,0 +1,70 @@
+
+/*.select2-results__options, .controls span{*/
+    /*font-size:14px !important;*/
+/*}*/
+
+#svg {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:white;
+}
+
+#svg text {
+    /*font-size: calc(12px + .3vh);*/
+}
+
+#lines circle:hover {
+    fill:none;
+}
+
+#lines path {
+    padding:10px;
+}
+
+#lines {
+    cursor: pointer;
+}
+
+#LineChartTitle h4 {
+    text-align: center;
+    color: black;
+    margin:10px 0px 0px 0px;
+}
+
+div.tooltip {
+    position: absolute;
+    text-align: center;
+    /*   width: 200px;
+      height: 60px;    */
+    padding: 2px;
+    font-weight: bold;
+    /* font:12px sans-serif; */
+    /*color: #bb133e;*/
+    /*background: #E8EAE9;*/
+    border: 0px;
+    border-radius: 4px;
+    pointer-events: none;
+    padding:4px;
+    z-index: 99;
+}
+
+
+#svgLineChart text {
+    font-size: calc(.5vh + 10px);
+}
+
+#lineChartFooter {
+    font-size: calc(.5vh + 10px);
+}
+
+#lineChartTitle {
+    margin:0;
+    /*height:40px;*/
+    vertical-align: middle;
+    /*position:absolute;*/
+    /*left:50%;*/
+}
+
+#appCont #chartCont, #appCont #controls {
+    position:absolute;
+}
+

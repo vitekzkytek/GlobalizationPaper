@@ -1,0 +1,218 @@
+Type,country_code,eu,eu_sub,full_name,imf2003,incomelevel,name,oecd,region
+country,AND,False,False,Andorra,Advanced countries,High income,Andorra,False,Europe
+country,CHN,False,False,China,Developing countries,Upper middle income,China,False,East Asia
+country,ATG,False,False,Antigua and Barbuda,Developing countries,High income,Antigua and Barbuda,False,South America
+country,ARG,False,False,Argentina,Developing countries,High income,Argentina,False,South America
+country,AUS,False,False,Australia,Advanced countries,High income,Australia,OECD,Pacific
+country,AUT,EU-28,EU-15,Austria,Advanced countries,High income,Austria,OECD,Europe
+country,IND,False,False,India,Developing countries,Lower middle income,India,False,South Asia
+country,BHS,False,False,Bahamas,Developing countries,High income,Bahamas,False,South America
+country,BHR,False,False,Bahrain,Developing countries,High income,Bahrain,False,Middle East
+country,BRB,False,False,Barbados,Developing countries,High income,Barbados,False,South America
+country,BEL,EU-28,EU-15,Belgium,Advanced countries,High income,Belgium,OECD,Europe
+country,BRN,False,False,Brunei Darussalam,Developing countries,High income,Brunei,False,East Asia
+country,ALB,False,False,Albania,Transition countries,Upper middle income,Albania,False,Europe
+country,BRA,False,False,Brazil,Developing countries,Upper middle income,Brazil,False,South America
+country,CAN,False,False,Canada,Advanced countries,High income,Canada,OECD,North America
+country,CHL,False,False,Chile,Developing countries,High income,Chile,OECD,South America
+country,ARM,False,False,Armenia,Transition countries,Upper middle income,Armenia,False,Central Asia
+country,TUR,False,False,Turkey,Developing countries,Upper middle income,Turkey,OECD,Central Asia
+country,HRV,EU-28,EU-13,Croatia,Transition countries,High income,Croatia,False,Europe
+country,CYP,EU-28,EU-13,Cyprus,Advanced countries,High income,Cyprus,False,Europe
+country,IRN,False,False,Iran,Developing countries,Upper middle income,Iran,False,Middle East
+country,CZE,EU-28,EU-13,Czech Republic,Transition countries,High income,Czechia,OECD,Europe
+country,DNK,EU-28,EU-15,Denmark,Advanced countries,High income,Denmark,OECD,Europe
+country,EST,EU-28,EU-13,Estonia,Transition countries,High income,Estonia,OECD,Europe
+country,FIN,EU-28,EU-15,Finland,Advanced countries,High income,Finland,OECD,Europe
+country,MEX,False,False,Mexico,Developing countries,Upper middle income,Mexico,OECD,North America
+country,AZE,False,False,Azerbaijan,Transition countries,Upper middle income,Azerbaijan,False,Central Asia
+country,FRA,EU-28,EU-15,France,Advanced countries,High income,France,OECD,Europe
+country,DEU,EU-28,EU-15,Germany,Advanced countries,High income,Germany,OECD,Europe
+country,GRC,EU-28,EU-15,Greece,Advanced countries,High income,Greece,OECD,Europe
+country,HKG,False,False,Hong Kong,Advanced countries,High income,Hong Kong,False,East Asia
+country,ZAF,False,False,South Africa,Developing countries,Upper middle income,South Africa,False,Sub-Saharan Africa
+country,HUN,EU-28,EU-13,Hungary,Transition countries,High income,Hungary,OECD,Europe
+country,ISL,False,False,Iceland,Advanced countries,High income,Iceland,OECD,Europe
+country,MYS,False,False,Malaysia,Developing countries,Upper middle income,Malaysia,False,East Asia
+country,IRL,EU-28,EU-15,Ireland,Advanced countries,High income,Ireland,OECD,Europe
+country,ISR,False,False,Israel,Advanced countries,High income,Israel,OECD,Middle East
+country,EGY,False,False,Egypt,Developing countries,Lower middle income,Egypt,False,North Africa
+country,ITA,EU-28,EU-15,Italy,Advanced countries,High income,Italy,OECD,Europe
+country,BLR,False,False,Belarus,Transition countries,Upper middle income,Belarus,False,Europe
+country,JPN,False,False,Japan,Advanced countries,High income,Japan,OECD,East Asia
+country,BIH,False,False,Bosnia and Herzegovina,Transition countries,Upper middle income,Bosnia and Herzegovina,False,Europe
+country,THA,False,False,Thailand,Developing countries,Upper middle income,Thailand,False,East Asia
+country,PAK,False,False,Pakistan,Developing countries,Lower middle income,Pakistan,False,South Asia
+country,KWT,False,False,Kuwait,Developing countries,High income,Kuwait,False,Middle East
+country,BGR,EU-28,EU-13,Bulgaria,Transition countries,Upper middle income,Bulgaria,False,Europe
+country,LVA,EU-28,EU-13,Latvia,Transition countries,High income,Latvia,OECD,Europe
+country,LIE,False,False,Liechtenstein,Advanced countries,High income,Liechtenstein,False,Europe
+country,COL,False,False,Colombia,Developing countries,Upper middle income,Colombia,False,South America
+country,LTU,EU-28,EU-13,Lithuania,Transition countries,High income,Lithuania,OECD,Europe
+country,NGA,False,False,Nigeria,Developing countries,Lower middle income,Nigeria,False,Sub-Saharan Africa
+country,GEO,False,False,Georgia,Transition countries,Lower middle income,Georgia,False,Central Asia
+country,TUN,False,False,Tunisia,Developing countries,Lower middle income,Tunisia,False,North Africa
+country,IDN,False,False,Indonesia,Developing countries,Lower middle income,Indonesia,False,East Asia
+country,LUX,EU-28,EU-15,Luxembourg,Advanced countries,High income,Luxembourg,OECD,Europe
+country,DZA,False,False,Algeria,Developing countries,Upper middle income,Algeria,False,North Africa
+country,MAR,False,False,Morocco,Developing countries,Lower middle income,Morocco,False,North Africa
+country,KAZ,False,False,Kazakhstan,Transition countries,Upper middle income,Kazakhstan,False,Central Asia
+country,VNM,False,False,Viet Nam,Developing countries,Lower middle income,Vietnam,False,East Asia
+country,CUB,False,False,Cuba,Developing countries,Upper middle income,Cuba,False,South America
+country,BGD,False,False,Bangladesh,Developing countries,Lower middle income,Bangladesh,False,South Asia
+country,MLT,EU-28,EU-13,Malta,Developing countries,High income,Malta,False,Europe
+country,JOR,False,False,Jordan,Developing countries,Upper middle income,Jordan,False,Middle East
+country,VEN,False,False,Venezuela,Developing countries,Upper middle income,Venezuela,False,South America
+country,KGZ,False,False,Kyrgyzstan,Transition countries,Lower middle income,Kyrgyzstan,False,Central Asia
+country,KEN,False,False,Kenya,Developing countries,Lower middle income,Kenya,False,Sub-Saharan Africa
+country,MCO,False,False,Monaco,Advanced countries,High income,Monaco,False,Europe
+country,PHL,False,False,Philippines,Developing countries,Lower middle income,Philippines,False,East Asia
+country,LBN,False,False,Lebanon,Developing countries,Upper middle income,Lebanon,False,Middle East
+country,PER,False,False,Peru,Developing countries,Upper middle income,Peru,False,South America
+country,ETH,False,False,Ethiopia,Developing countries,Low income,Ethiopia,False,Sub-Saharan Africa
+country,NLD,EU-28,EU-15,Netherlands,Advanced countries,High income,Netherlands,OECD,Europe
+country,IRQ,False,False,Iraq,Developing countries,Upper middle income,Iraq,False,Middle East
+country,NZL,False,False,New Zealand,Advanced countries,High income,New Zealand,OECD,Pacific
+country,NOR,False,False,Norway,Advanced countries,High income,Norway,OECD,Europe
+country,OMN,False,False,Oman,Developing countries,High income,Oman,False,Middle East
+country,PLW,False,False,Palau,Developing countries,High income,Palau,False,Pacific
+country,GHA,False,False,Ghana,Developing countries,Lower middle income,Ghana,False,Sub-Saharan Africa
+country,PAN,False,False,Panama,Developing countries,High income,Panama,False,South America
+country,TZA,False,False,Tanzania,Developing countries,Low income,Tanzania,False,Sub-Saharan Africa
+country,UGA,False,False,Uganda,Developing countries,Low income,Uganda,False,Sub-Saharan Africa
+country,POL,EU-28,EU-13,Poland,Transition countries,High income,Poland,OECD,Europe
+country,CMR,False,False,Cameroon,Developing countries,Lower middle income,Cameroon,False,Sub-Saharan Africa
+country,MKD,False,False,Macedonia,Transition countries,Upper middle income,Macedonia,False,Europe
+country,MDA,False,False,Moldova,Transition countries,Lower middle income,Moldova,False,Europe
+country,MNG,False,False,Mongolia,Transition countries,Lower middle income,Mongolia,False,East Asia
+country,LKA,False,False,Sri Lanka,Developing countries,Lower middle income,Sri Lanka,False,South Asia
+country,PRT,EU-28,EU-15,Portugal,Advanced countries,High income,Portugal,OECD,Europe
+country,ECU,False,False,Ecuador,Developing countries,Upper middle income,Ecuador,False,South America
+country,MNE,False,False,Montenegro,Transition countries,Upper middle income,Montenegro,False,Europe
+country,NPL,False,False,Nepal,Developing countries,Low income,Nepal,False,South Asia
+country,CRI,False,False,Costa Rica,Developing countries,Upper middle income,Costa Rica,False,South America
+country,QAT,False,False,Qatar,Developing countries,High income,Qatar,False,Middle East
+country,SEN,False,False,Senegal,Developing countries,Low income,Senegal,False,Sub-Saharan Africa
+country,ROU,EU-28,EU-13,Romania,Transition countries,Upper middle income,Romania,False,Europe
+country,RUS,False,False,Russian Federation,Transition countries,Upper middle income,Russia,False,Europe
+country,ZWE,False,False,Zimbabwe,Developing countries,Low income,Zimbabwe,False,Sub-Saharan Africa
+country,SDN,False,False,Sudan,Developing countries,Lower middle income,Sudan,False,Sub-Saharan Africa
+country,MWI,False,False,Malawi,Developing countries,Low income,Malawi,False,Sub-Saharan Africa
+country,SYR,False,False,Syrian Arab Republic,Developing countries,Low income,Syria,False,Middle East
+country,KNA,False,False,Saint Kitts and Nevis,Developing countries,High income,Saint Kitts and Nevis,False,South America
+country,BFA,False,False,Burkina Faso,Developing countries,Low income,Burkina Faso,False,Sub-Saharan Africa
+country,BWA,False,False,Botswana,Developing countries,Upper middle income,Botswana,False,Sub-Saharan Africa
+country,PSE,False,False,Palestine,Developing countries,Lower middle income,Palestine,False,Middle East
+country,SRB,False,False,Serbia,Transition countries,Upper middle income,Serbia,False,Europe
+country,CIV,False,False,Cote d'Ivoire,Developing countries,Lower middle income,Cote d'Ivoire,False,Sub-Saharan Africa
+country,ZMB,False,False,Zambia,Developing countries,Lower middle income,Zambia,False,Sub-Saharan Africa
+country,SMR,False,False,San Marino,Advanced countries,High income,San Marino,False,Europe
+country,SAU,False,False,Saudi Arabia,Developing countries,High income,Saudi Arabia,False,North Africa
+country,BEN,False,False,Benin,Developing countries,Low income,Benin,False,Sub-Saharan Africa
+country,SYC,False,False,Seychelles,Developing countries,High income,Seychelles,False,Sub-Saharan Africa
+country,JAM,False,False,Jamaica,Developing countries,Upper middle income,Jamaica,False,South America
+country,COG,False,False,Congo,Developing countries,Lower middle income,Congo,False,Sub-Saharan Africa
+country,BOL,False,False,Bolivia,Developing countries,Lower middle income,Bolivia,False,South America
+country,MDG,False,False,Madagascar,Developing countries,Low income,Madagascar,False,Sub-Saharan Africa
+country,LBY,False,False,Libyan Arab Jamahiriya,Developing countries,Upper middle income,Libya,False,North Africa
+country,YEM,False,False,Yemen,Developing countries,Low income,Yemen,False,Middle East
+country,SGP,False,False,Singapore,Advanced countries,High income,Singapore,False,East Asia
+country,SVK,EU-28,EU-13,Slovakia,Transition countries,High income,Slovakia,OECD,Europe
+country,KHM,False,False,Cambodia,Developing countries,Lower middle income,Cambodia,False,East Asia
+country,MOZ,False,False,Mozambique,Developing countries,Low income,Mozambique,False,Sub-Saharan Africa
+country,MLI,False,False,Mali,Developing countries,Low income,Mali,False,Sub-Saharan Africa
+country,SVN,EU-28,EU-13,Slovenia,Transition countries,High income,Slovenia,OECD,Europe
+country,TJK,False,False,Tajikistan,Transition countries,Low income,Tajikistan,False,Central Asia
+country,FJI,False,False,Fiji,Developing countries,Upper middle income,Fiji,False,Pacific
+country,NAM,False,False,Namibia,Developing countries,Upper middle income,Namibia,False,Sub-Saharan Africa
+country,GTM,False,False,Guatemala,Developing countries,Upper middle income,Guatemala,False,South America
+country,RWA,False,False,Rwanda,Developing countries,Low income,Rwanda,False,Sub-Saharan Africa
+country,GAB,False,False,Gabon,Developing countries,Upper middle income,Gabon,False,Sub-Saharan Africa
+country,LAO,False,False,Laos,Developing countries,Lower middle income,Laos,False,East Asia
+country,MUS,False,False,Mauritius,Developing countries,Upper middle income,Mauritius,False,Sub-Saharan Africa
+country,GMB,False,False,Gambia,Developing countries,Low income,Gambia,False,Sub-Saharan Africa
+country,PNG,False,False,Papua New Guinea,Developing countries,Lower middle income,Papua New Guinea,False,Pacific
+country,MMR,False,False,Myanmar,Developing countries,Lower middle income,Myanmar,False,East Asia
+country,NER,False,False,Niger,Developing countries,Low income,Niger,False,Sub-Saharan Africa
+country,TKM,False,False,Turkmenistan,Transition countries,Upper middle income,Turkmenistan,False,Central Asia
+country,KOR,False,False,South Korea,Advanced countries,High income,South Korea,OECD,East Asia
+country,PRY,False,False,Paraguay,Developing countries,Upper middle income,Paraguay,False,South America
+country,TGO,False,False,Togo,Developing countries,Low income,Togo,False,Sub-Saharan Africa
+country,ESP,EU-28,EU-15,Spain,Advanced countries,High income,Spain,OECD,Europe
+country,NIC,False,False,Nicaragua,Developing countries,Lower middle income,Nicaragua,False,South America
+country,GRD,False,False,Grenada,Developing countries,Upper middle income,Grenada,False,South America
+country,UKR,False,False,Ukraine,Transition countries,Lower middle income,Ukraine,False,Europe
+country,DOM,False,False,Dominican Republic,Developing countries,Upper middle income,Dominican Republic,False,South America
+country,SLV,False,False,El Salvador,Developing countries,Lower middle income,El Salvador,False,South America
+country,SWZ,False,False,Swaziland,Developing countries,Lower middle income,Swaziland,False,Sub-Saharan Africa
+country,SWE,EU-28,EU-15,Sweden,Advanced countries,High income,Sweden,OECD,Europe
+country,HND,False,False,Honduras,Developing countries,Lower middle income,Honduras,False,South America
+country,AFG,False,False,Afghanistan,Developing countries,Low income,Afghanistan,False,South Asia
+country,HTI,False,False,Haiti,Developing countries,Low income,Haiti,False,South America
+country,AGO,False,False,Angola,Developing countries,Lower middle income,Angola,False,Sub-Saharan Africa
+country,GIN,False,False,Guinea,Developing countries,Low income,Guinea,False,Sub-Saharan Africa
+country,SLE,False,False,Sierra Leone,Developing countries,Low income,Sierra Leone,False,Sub-Saharan Africa
+country,COD,False,False,Democratic Republic Congo,Developing countries,Low income,Democratic Republic Congo,False,Sub-Saharan Africa
+country,BTN,False,False,Bhutan,Developing countries,Lower middle income,Bhutan,False,South Asia
+country,PRK,False,False,North Korea,Developing countries,Low income,North Korea,False,East Asia
+country,CAF,False,False,Central African Republic,Developing countries,Low income,Central African Republic,False,Sub-Saharan Africa
+country,CHE,False,False,Switzerland,Advanced countries,High income,Switzerland,OECD,Europe
+country,MRT,False,False,Mauritania,Developing countries,Lower middle income,Mauritania,False,Sub-Saharan Africa
+country,LSO,False,False,Lesotho,Developing countries,Lower middle income,Lesotho,False,Sub-Saharan Africa
+country,GNB,False,False,Guinea-Bissau,Developing countries,Low income,Guinea-Bissau,False,Sub-Saharan Africa
+country,GUY,False,False,Guyana,Developing countries,Upper middle income,Guyana,False,South America
+country,ERI,False,False,Eritrea,Developing countries,Low income,Eritrea,False,Sub-Saharan Africa
+country,TWN,False,False,Taiwan,Advanced countries,High income,Taiwan,False,East Asia
+country,TCD,False,False,Chad,Developing countries,Low income,Chad,False,Sub-Saharan Africa
+country,BDI,False,False,Burundi,Developing countries,Low income,Burundi,False,Sub-Saharan Africa
+country,TTO,False,False,Trinidad and Tobago,Developing countries,High income,Trinidad and Tobago,False,South America
+country,LBR,False,False,Liberia,Developing countries,Low income,Liberia,False,Sub-Saharan Africa
+country,VUT,False,False,Vanuatu,Developing countries,Lower middle income,Vanuatu,False,Pacific
+country,BLZ,False,False,Belize,Developing countries,Upper middle income,Belize,False,South America
+country,SLB,False,False,Solomon Islands,Developing countries,Lower middle income,Solomon Islands,False,Pacific
+country,SUR,False,False,Suriname,Developing countries,Upper middle income,Suriname,False,South America
+country,DMA,False,False,Dominica,Developing countries,Upper middle income,Dominica,False,South America
+country,CPV,False,False,Cape Verde,Developing countries,Lower middle income,Cape Verde,False,Sub-Saharan Africa
+country,WSM,False,False,Samoa,Developing countries,Upper middle income,Samoa,False,Pacific
+country,MDV,False,False,Maldives,Developing countries,Upper middle income,Maldives,False,South Asia
+country,UZB,False,False,Uzbekistan,Transition countries,Lower middle income,Uzbekistan,False,Central Asia
+country,FSM,False,False,Federated States of Micronesia,Developing countries,Lower middle income,Micronesia,False,Pacific
+country,DJI,False,False,Djibouti,Developing countries,Lower middle income,Djibouti,False,North Africa
+country,ARE,False,False,United Arab Emirates,Developing countries,High income,United Arab Emirates,False,Middle East
+country,GBR,EU-28,EU-15,United Kingdom,Advanced countries,High income,United Kingdom,OECD,Europe
+country,USA,False,False,United States,Advanced countries,High income,United States,OECD,North America
+country,GNQ,False,False,Equatorial Guinea,Developing countries,Upper middle income,Equatorial Guinea,False,Sub-Saharan Africa
+country,TLS,False,False,Timor-Leste,Developing countries,Lower middle income,Timor-Leste,False,East Asia
+country,URY,False,False,Uruguay,Developing countries,High income,Uruguay,False,South America
+country,SOM,False,False,Somalia,Developing countries,Low income,Somalia,False,Sub-Saharan Africa
+country,TON,False,False,Tonga,Developing countries,Upper middle income,Tonga,False,Pacific
+country,COM,False,False,Comoros,Developing countries,Low income,Comoros,False,Sub-Saharan Africa
+country,LCA,False,False,Saint Lucia,Developing countries,Upper middle income,Saint Lucia,False,South America
+country,VCT,False,False,Saint Vincent and the Grenadines,Developing countries,Upper middle income,Saint Vincent and the Grenadines,False,South America
+country,MHL,False,False,Marshall Islands,Developing countries,Upper middle income,Marshall Islands,False,Pacific
+country,KIR,False,False,Kiribati,Developing countries,Lower middle income,Kiribati,False,Pacific
+country,STP,False,False,Sao Tome and Principe,Developing countries,Lower middle income,Sao Tome and Principe,False,Sub-Saharan Africa
+country,TUV,False,False,Tuvalu,Developing countries,Upper middle income,Tuvalu,False,Pacific
+country,NRU,False,False,Nauru,Developing countries,Upper middle income,Nauru,False,Pacific
+aggregate,_Europe,,,Europe,,,Europe,,
+aggregate,_NAmer,,,North America,,,North America,,
+aggregate,_SAmer,,,South America,,,South America,,
+aggregate,_CAsia,,,Central Asia,,,Central Asia,,
+aggregate,_MEast,,,Middle East,,,Middle East,,
+aggregate,_EAsia,,,East Asia,,,East Asia,,
+aggregate,_SAsia,,,South Asia,,,South Asia,,
+aggregate,_Pac,,,Pacific,,,Pacific,,
+aggregate,_NAfr,,,North Africa,,,North Africa,,
+aggregate,_SSAfr,,,Sub-Saharan Africa,,,Sub-Saharan Africa,,
+aggregate,_UMI,,,Upper middle income,,,Upper middle income,,
+aggregate,_HI,,,High income,,,High income,,
+aggregate,_LMI,,,Lower middle income,,,Lower middle income,,
+aggregate,_LI,,,Low income,,,Low income,,
+aggregate,_EU15,,,EU-15,,,EU-15,,
+aggregate,_EU13,,,EU-13,,,EU-13,,
+aggregate,_EU,,,EU-28,,,EU-28,,
+aggregate,_OECD,,,OECD,,,OECD,,
+aggregate,_ADV,,,Advanced countries,,,Advanced countries,,
+aggregate,_TRA,,,Transition countries,,,Transition countries,,
+aggregate,_DEV,,,Developing countries,,,Developing countries,,
+aggregate,_AV,,,World,,,World,,
