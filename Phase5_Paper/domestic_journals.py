@@ -101,7 +101,7 @@ def GetTotalDocumentsForJournals(con,after=2014):
     '''.format(after)
  
     return pd.read_sql_query(query, index_col='Journal',con=con)
-#%%
+
  
 def calcDomesticJournalsEuropePlot():
     conn = DB_joinJournals()
