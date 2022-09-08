@@ -1,0 +1,175 @@
+country_code,name,classification
+DZA,Algeria,Developing - Africa
+ARG,Argentina,Developing - America
+ARM,Armenia,Transition - non-EU
+AUS,Australia,Advanced countries
+AUT,Austria,Advanced countries
+BGD,Bangladesh,Developing – Asia and Pacific
+BLR,Belarus,Transition - non-EU
+BEL,Belgium,Advanced countries
+BEN,Benin,Developing - Africa
+BOL,Bolivia,Developing - America
+BIH,Bosnia and Herzegovina,Transition - non-EU
+BWA,Botswana,Developing - Africa
+BRA,Brazil,Developing - America
+BGR,Bulgaria,Transition - EU
+BFA,Burkina Faso,Developing - Africa
+KHM,Cambodia,Developing – Asia and Pacific
+CMR,Cameroon,Developing - Africa
+CAN,Canada,Advanced countries
+CHL,Chile,Developing - America
+CHN,China,Developing – Asia and Pacific
+COL,Colombia,Developing - America
+COG,Congo,Developing - Africa
+CRI,Costa Rica,Developing - America
+CIV,Cote d'Ivoire,Developing - Africa
+HRV,Croatia,Transition - EU
+CUB,Cuba,Developing - America
+CYP,Cyprus,Advanced countries
+CZE,Czechia,Transition - EU
+DNK,Denmark,Advanced countries
+ECU,Ecuador,Developing - America
+EGY,Egypt,Developing - Africa
+EST,Estonia,Transition - EU
+ETH,Ethiopia,Developing - Africa
+FIN,Finland,Advanced countries
+FRA,France,Advanced countries
+GAB,Gabon,Developing - Africa
+GEO,Georgia,Transition - non-EU
+DEU,Germany,Advanced countries
+GHA,Ghana,Developing - Africa
+GRC,Greece,Advanced countries
+GTM,Guatemala,Developing - America
+HKG,Hong Kong,Advanced countries
+HUN,Hungary,Transition - EU
+ISL,Iceland,Advanced countries
+IND,India,Developing – Asia and Pacific
+IDN,Indonesia,Developing – Asia and Pacific
+IRN,Iran,Developing – Asia and Pacific
+IRL,Ireland,Advanced countries
+ISR,Israel,Advanced countries
+ITA,Italy,Advanced countries
+JAM,Jamaica,Developing - America
+JPN,Japan,Advanced countries
+JOR,Jordan,Developing – Asia and Pacific
+KAZ,Kazakhstan,Transition - non-EU
+KEN,Kenya,Developing - Africa
+KWT,Kuwait,Developing – Asia and Pacific
+LVA,Latvia,Transition - EU
+LBN,Lebanon,Developing – Asia and Pacific
+LTU,Lithuania,Transition - EU
+LUX,Luxembourg,Advanced countries
+MKD,Macedonia,Transition - non-EU
+MDG,Madagascar,Developing - Africa
+MWI,Malawi,Developing - Africa
+MYS,Malaysia,Developing – Asia and Pacific
+MLI,Mali,Developing - Africa
+MEX,Mexico,Developing - America
+MNG,Mongolia,Transition - non-EU
+MAR,Morocco,Developing - Africa
+MOZ,Mozambique,Developing - Africa
+NAM,Namibia,Developing - Africa
+NPL,Nepal,Developing – Asia and Pacific
+NLD,Netherlands,Advanced countries
+NZL,New Zealand,Advanced countries
+NGA,Nigeria,Developing - Africa
+NOR,Norway,Advanced countries
+OMN,Oman,Developing – Asia and Pacific
+PAK,Pakistan,Developing – Asia and Pacific
+PAN,Panama,Developing - America
+PER,Peru,Developing - America
+PHL,Philippines,Developing – Asia and Pacific
+POL,Poland,Transition - EU
+PRT,Portugal,Advanced countries
+ROU,Romania,Transition - EU
+RUS,Russia,Transition - non-EU
+SAU,Saudi Arabia,Developing - Africa
+SEN,Senegal,Developing - Africa
+SGP,Singapore,Advanced countries
+SVK,Slovakia,Transition - EU
+SVN,Slovenia,Transition - EU
+ZAF,South Africa,Developing - Africa
+KOR,South Korea,Advanced countries
+ESP,Spain,Advanced countries
+LKA,Sri Lanka,Developing – Asia and Pacific
+SDN,Sudan,Developing - Africa
+SWE,Sweden,Advanced countries
+CHE,Switzerland,Advanced countries
+SYR,Syria,Developing – Asia and Pacific
+TWN,Taiwan,Advanced countries
+TZA,Tanzania,Developing - Africa
+THA,Thailand,Developing – Asia and Pacific
+TTO,Trinidad and Tobago,Developing - America
+TUN,Tunisia,Developing - Africa
+TUR,Turkey,Developing – Asia and Pacific
+UGA,Uganda,Developing - Africa
+UKR,Ukraine,Transition - non-EU
+ARE,United Arab Emirates,Developing – Asia and Pacific
+GBR,United Kingdom,Advanced countries
+USA,United States,Advanced countries
+URY,Uruguay,Developing - America
+UZB,Uzbekistan,Transition - non-EU
+VEN,Venezuela,Developing - America
+VNM,Vietnam,Developing – Asia and Pacific
+ZMB,Zambia,Developing - Africa
+ZWE,Zimbabwe,Developing - Africa
+MLT,Malta,Advanced countries
+AZE,Azerbaijan,Transition - non-EU
+BHR,Bahrain,Developing – Asia and Pacific
+FJI,Fiji,Developing – Asia and Pacific
+IRQ,Iraq,Developing – Asia and Pacific
+KGZ,Kyrgyzstan,Transition - non-EU
+LBY,Libya,Developing - Africa
+MDA,Moldova,Transition - non-EU
+PRK,North Korea,Developing – Asia and Pacific
+PSE,Palestine,Developing – Asia and Pacific
+QAT,Qatar,Developing – Asia and Pacific
+SRB,Serbia,Transition - non-EU
+GMB,Gambia,Developing - Africa
+ALB,Albania,Transition - non-EU
+BRB,Barbados,Developing - America
+BRN,Brunei,Developing – Asia and Pacific
+SLV,El Salvador,Developing - America
+HND,Honduras,Developing - America
+LAO,Laos,Developing – Asia and Pacific
+LIE,Liechtenstein,Advanced countries
+MUS,Mauritius,Developing - Africa
+MCO,Monaco,Advanced countries
+MMR,Myanmar,Developing – Asia and Pacific
+NIC,Nicaragua,Developing - America
+NER,Niger,Developing - Africa
+PNG,Papua New Guinea,Developing – Asia and Pacific
+PRY,Paraguay,Developing - America
+TGO,Togo,Developing - Africa
+YEM,Yemen,Developing – Asia and Pacific
+DOM,Dominican Republic,Developing - America
+ERI,Eritrea,Developing - Africa
+GIN,Guinea,Developing - Africa
+RWA,Rwanda,Developing - Africa
+TJK,Tajikistan,Transition - non-EU
+MNE,Montenegro,Transition - non-EU
+SWZ,Swaziland,Developing - Africa
+AFG,Afghanistan,Developing – Asia and Pacific
+GRD,Grenada,Developing - America
+LSO,Lesotho,Developing - Africa
+AGO,Angola,Developing - Africa
+COD,Democratic Republic Congo,Developing - Africa
+BTN,Bhutan,Developing – Asia and Pacific
+SLE,Sierra Leone,Developing - Africa
+CAF,Central African Republic,Developing - Africa
+HTI,Haiti,Developing - America
+SYC,Seychelles,Developing - Africa
+MRT,Mauritania,Developing - Africa
+BHS,Bahamas,Developing - America
+GNB,Guinea-Bissau,Developing - Africa
+KNA,Saint Kitts and Nevis,Developing - America
+BDI,Burundi,Developing - Africa
+LBR,Liberia,Developing - Africa
+CPV,Cape Verde,Developing - Africa
+DMA,Dominica,Developing - America
+GUY,Guyana,Developing - America
+SUR,Suriname,Developing - America
+VUT,Vanuatu,Developing – Asia and Pacific
+TCD,Chad,Developing - Africa
+SLB,Solomon Islands,Developing – Asia and Pacific
+BLZ,Belize,Developing - America
