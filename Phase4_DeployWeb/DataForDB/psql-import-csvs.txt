@@ -1,7 +1,7 @@
-\copy country(Type,country_code,eu,eu_sub,full_name,imf2003,incomelevel,name,oecd,region) from '/data-for-db/country.csv' with delimiter ',' csv header;
+\copy country(Type,country_code,eu,eu_sub,full_name,imf2003,incomelevel,name,oecd,region) from '/DataForDB/country.csv' with delimiter ',' csv header;
 
-\copy field(field_code,name,level,scopus_code,scopus_name,leg_name) from '/data-for-db/field.csv' with delimiter ',' csv header;
+\copy field(field_code,name,level,scopus_code,scopus_name,leg_name) from '/DataForDB/field.csv' with delimiter ',' csv header;
 
-\copy method(method_code,minmax,name,full_name,short_desc,input,description,formula,source) from '/data-for-db/method.csv' with delimiter ',' csv header;
+\copy method(method_code,minmax,name,full_name,short_desc,input,description,formula,source) from '/DataForDB/method.csv' with delimiter ',' csv header;
 
-\copy interindex(country_code,field_code,method_code,period,value) from '/data-for-db/index.csv' with delimiter ',' csv header;
+\copy interindex(country_code,field_code,method_code,period,value) from '/DataForDB/index.csv' with delimiter ',' csv header;

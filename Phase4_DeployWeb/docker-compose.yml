@@ -9,7 +9,9 @@ services:
          POSTGRES_USER: postgres
          POSTGRES_DB: scienceInternationalitydb
       volumes:
-         - ./db/GlobalizationData.sql:/docker-entrypoint-initdb.d/init.sql
+         - ./DataForDB/drop_generate_schema.sql:/docker-entrypoint-initdb.d/1-schema.sql
+         - ./DataForDB/psql-import-csvs.txt:/docker-entrypoint-initdb.d/2-import.sql
+         - ./DataForDB:/DataForDB
    globalization_app:
       build:
          context: .

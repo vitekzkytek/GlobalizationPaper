@@ -20,7 +20,7 @@ create table country
 );
 
 alter table country
-  owner to root;
+  owner to postgres;
 
 create unique index country_country_code_uindex
   on country (country_code);
@@ -40,7 +40,7 @@ create table field
 );
 
 alter table field
-  owner to root;
+  owner to postgres;
 
 create unique index field_field_code_uindex
   on field (field_code);
@@ -62,7 +62,7 @@ create table method
 );
 
 alter table method
-  owner to root;
+  owner to postgres;
 
 create unique index method_id_uindex
   on method (method_code);
@@ -86,7 +86,7 @@ create table interindex
 );
 
 alter table interindex
-  owner to root;
+  owner to postgres;
 
 create unique index interindex_id_uindex
   on interindex (id);

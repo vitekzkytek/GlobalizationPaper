@@ -38,13 +38,13 @@ The calculation processes is
  For now the database is feeded from a simple dump and therefore Docker would not reflect changes in the computational part.
  
 Run container:
-
-1. Install Docker [see here](https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04)
+0. Clone this repo `git clone https://github.com/vitekzkytek/GlobalizationScience.git`
+1. Install Docker [see here](https://docs.docker.com/engine/install/ubuntu/#installation-methods)
 2. `sudo apt install docker-compose`
-3. ` cd /srv/`
-4. `git clone https://github.com/vitekzkytek/GlobalizationScience.git`
-2. `cd /srv/GlobalizationScience/InteractiveWeb/`
+2. `cd ./Phase4_DeployWeb/`
 3. `docker-compose up -d`
+
+App should be running on port 80. Ensure it is open
 
 ### `/Phase5_Paper/`
 writing and computing results for the paper
